@@ -1,0 +1,86 @@
+:root {
+  --gold-color: #FFD700;
+  --orange-color: #FFA500;
+}
+
+/* Label style */
+input[type="radio"].small_slides+label {
+  outline: transparent;
+}
+
+/* Label hover style */
+input[type="radio"].small_slides+label:hover,
+input[type="radio"].small_slides+label:focus {
+  background: linear-gradient(90deg,
+      hsl(227, 18%, 85%) 0%,
+      hsl(0deg 0% 100%) 100%,
+      hsl(0deg 0% 100%) 100%);
+}
+
+/* Input checked && label style */
+input[type="radio"].small_slides:checked+label {
+  background: linear-gradient(130deg,
+      #d53a9d22 0%,
+      #743ad522 100%);
+}
+
+/* Input checked && label hover style */
+input[type="radio"].small_slides:checked+label:hover {
+  background: linear-gradient(130deg,
+      #d53a9d55 0%,
+      #743ad555 100%);
+}
+
+input[type="radio"].small_slides:checked + label >* .small_slide_line {
+  height: 60%;
+  width: inherit;
+  margin: auto auto auto 3px;
+  border-radius: 9999px;
+  background: linear-gradient(130deg,
+      #d53a9d 0%,
+      #743ad5 100%);
+      
+}
+
+/* Small slides */
+/* input[type="radio"].small_slides+label>* .small-slide-main {
+} */
+
+/* Small slide effect while label hover */
+input[type="radio"].small_slides+label:hover>* .small-slide-main,
+input[type="radio"].small_slides+label:focus>* .small-slide-main {
+  outline: 30px solid #000;
+  outline-style: dashed;
+  outline-offset: 20px;
+}
+
+/* Small slide effect when input is checked */
+input[type="radio"].small_slides:checked+label:focus>* .small-slide-main,
+input[type="radio"].small_slides:checked+label:hover>* .small-slide-main {
+  outline: none;
+}
+
+input[type="radio"].small_slides:checked+label>* .small-slide-main::before {
+  /* https://css-tricks.com/different-ways-to-get-css-gradient-shadows/ */
+  content: "";
+  position: absolute;
+  inset: -65px;
+  transform: translate(0px, 0px);
+  z-index: -1;
+  background: linear-gradient(to left, #743ad5, #d53a9d);
+}
+
+/* Small slide effect when input is checked and label is hovered */
+input[type="radio"].small_slides:checked+label:hover>* .small-slide-main {}
+
+/* https://codepen.io/chriscoyier/pen/ZVYXRx */
+
+/* .border-gradient {
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+}
+
+.border-gradient-purple {
+  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+} */
