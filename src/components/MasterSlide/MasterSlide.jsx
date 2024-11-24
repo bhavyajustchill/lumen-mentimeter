@@ -21,9 +21,10 @@ const MasterSlide = React.forwardRef(({ activeSlide, slides, propertiesWindow },
         2 +
       "px";
   };
+  
+  useEffect(handleMasterSlideResize);
 
   useEffect(() => {
-    handleMasterSlideResize();
     window.addEventListener("resize", handleMasterSlideResize);
     return () => window.removeEventListener("resize", handleMasterSlideResize);
   }, []);
