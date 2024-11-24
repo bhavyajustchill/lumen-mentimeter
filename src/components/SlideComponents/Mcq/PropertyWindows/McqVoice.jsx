@@ -1,12 +1,10 @@
 import React, { useState } from "react";
-import TrackItem from "../../shared/TrackItem";
+import TrackItem from "../../../AudioPlayer/TrackItem";
 
 const McqVoice = ({ activeSlide, slides, setSlides }) => {
   const [playingIndex, setPlayingIndex] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
-  const [voiceTracks, setVoiceTracks] = useState(
-    slides[activeSlide]?.voiceTracks || []
-  );
+  const [voiceTracks, setVoiceTracks] = useState(slides[activeSlide]?.voiceTracks || []);
 
   const handleVoiceUpload = (e) => {
     const files = Array.from(e.target.files);
@@ -20,9 +18,7 @@ const McqVoice = ({ activeSlide, slides, setSlides }) => {
               const trackData = {
                 name: file.name,
                 url: upload.target.result,
-                duration: `${Math.floor(audio.duration / 60)}:${Math.floor(
-                  audio.duration % 60
-                )
+                duration: `${Math.floor(audio.duration / 60)}:${Math.floor(audio.duration % 60)
                   .toString()
                   .padStart(2, "0")}`,
               };

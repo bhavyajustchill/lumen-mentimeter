@@ -1,16 +1,12 @@
 import React, { useState } from "react";
-import TrackItem from "../../shared/TrackItem";
+import TrackItem from "../../../AudioPlayer/TrackItem";
 
 const McqMusic = ({ activeSlide, slides, setSlides }) => {
   const [activeTab, setActiveTab] = useState("Tracks");
   const [playingIndex, setPlayingIndex] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
-  const [uploadedTracks, setUploadedTracks] = useState(
-    slides[activeSlide]?.uploadedMusic || []
-  );
-  const [recentTracks, setRecentTracks] = useState(
-    slides[activeSlide]?.recentMusic || []
-  );
+  const [uploadedTracks, setUploadedTracks] = useState(slides[activeSlide]?.uploadedMusic || []);
+  const [recentTracks, setRecentTracks] = useState(slides[activeSlide]?.recentMusic || []);
 
   const predefinedTracks = [
     {
@@ -42,9 +38,7 @@ const McqMusic = ({ activeSlide, slides, setSlides }) => {
               const newTrack = {
                 name: file.name,
                 url: upload.target.result,
-                duration: `${Math.floor(audio.duration / 60)}:${Math.floor(
-                  audio.duration % 60
-                )
+                duration: `${Math.floor(audio.duration / 60)}:${Math.floor(audio.duration % 60)
                   .toString()
                   .padStart(2, "0")}`,
               };
@@ -123,8 +117,7 @@ const McqMusic = ({ activeSlide, slides, setSlides }) => {
               activeTab === tab
                 ? "border-b-2 border-blue-500 text-blue-500"
                 : "text-gray-600 hover:text-blue-500"
-            }`}
-          >
+            }`}>
             {tab}
           </button>
         ))}
