@@ -5,7 +5,7 @@ import ContentPages, { display } from "../SlideComponents/ContentPages";
 const LeftSidebar = ({ activeSlide, setActiveSlide, slides }) => {
   const Slides = () =>
     slides.map((slide, i) => {
-      const SlideComponent = ContentPages[slide.content_type][display];
+      const SlideComponent = ContentPages["mcq"][display];
       return (
         <React.Fragment key={slide.id}>
           <input
@@ -28,12 +28,8 @@ const LeftSidebar = ({ activeSlide, setActiveSlide, slides }) => {
             }}
             htmlFor={`small_slides_${i}`}
             className="flex w-full relative cursor-pointer border-b border-1"
-            style={{ aspectRatio: "16/9" }}
-          >
-            <div
-              className="relative flex font-semibold py-2"
-              style={{ width: "32px" }}
-            >
+            style={{ aspectRatio: "16/9" }}>
+            <div className="relative flex font-semibold py-2" style={{ width: "32px" }}>
               <div className="h-full grid" style={{ width: "40%" }}>
                 <div className="small_slide_line"></div>
               </div>
@@ -50,8 +46,7 @@ const LeftSidebar = ({ activeSlide, setActiveSlide, slides }) => {
                   transformOrigin: "top left",
                   top: "13%",
                   left: "4%",
-                }}
-              >
+                }}>
                 <div
                   style={{
                     ...slide?.style,
@@ -60,8 +55,7 @@ const LeftSidebar = ({ activeSlide, setActiveSlide, slides }) => {
                     width: 1920,
                     height: 1080,
                   }}
-                  className=" relative text-4xl  small-slide-main"
-                >
+                  className=" relative text-4xl  small-slide-main">
                   <div className="h-full w-full overflow-hidden">
                     {<SlideComponent {...{ ...slide.content, id: slide.id }} />}
                   </div>
@@ -77,8 +71,7 @@ const LeftSidebar = ({ activeSlide, setActiveSlide, slides }) => {
     <>
       <div
         style={{ flexBasis: "14em" }}
-        className="overflow-y-scroll scrollbar-style-1 bg-white gap-2 flex flex-col flex-shrink-0 flex-grow-0"
-      >
+        className="overflow-y-scroll scrollbar-style-1 bg-white gap-2 flex flex-col flex-shrink-0 flex-grow-0">
         <ul className="">{<Slides />}</ul>
       </div>
     </>

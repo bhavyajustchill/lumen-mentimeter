@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useRef } from "react";
 import ContentPages, { admin } from "../SlideComponents/ContentPages";
 
 const MasterSlide = React.forwardRef(({ activeSlide, slides, propertiesWindow }, ref) => {
-  const ActiveSlide = ContentPages[slides[activeSlide].content_type][admin];
+  const ActiveSlide = ContentPages["mcq"][admin];
 
   const MasterSlideContainer = useRef(null);
   const MASTER_SLIDE_FIXED_WIDTH = 1920;
