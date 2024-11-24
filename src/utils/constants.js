@@ -394,43 +394,59 @@ export const slides = [
   {
     id: 1,
     content: {
-      title: "Bar Chart Example",
+      title: "Student Performance Overview",
       options: {
         data: [
-          { text: "Option A", id: 1 },
-          { text: "Option B", id: 2 },
-          { text: "Option C", id: 3 },
+          { text: "Adhiya Mansee Bhupatrai", id: 1 },
+          { text: "Akbari Krupali Jayantibhai", id: 2 },
+          { text: "Ashara Janvi Pareshbhai", id: 3 },
+          { text: "Bhalodiya Milan .", id: 4 },
+          { text: "Chavda Drashti Chetanbhai", id: 5 },
         ],
       },
     },
     chartData: {
       chartType: "bar",
-      options: ["Option A", "Option B", "Option C"],
-      data: [10, 20, 15],
+      options: [
+        "Adhiya Mansee Bhupatrai",
+        "Akbari Krupali Jayantibhai",
+        "Ashara Janvi Pareshbhai",
+        "Bhalodiya Milan .",
+        "Chavda Drashti Chetanbhai",
+      ],
+      data: [151, 148, 147, 147, 130],
     },
   },
   {
     id: 2,
     content: {
-      title: "Line Chart Example",
+      title: "Comparative Performance (CIA1 vs CIA2)",
       options: {
         data: [
-          { text: "Option X", id: 1 },
-          { text: "Option Y", id: 2 },
-          { text: "Option Z", id: 3 },
+          { text: "Adhiya Mansee Bhupatrai", id: 1 },
+          { text: "Akbari Krupali Jayantibhai", id: 2 },
+          { text: "Ashara Janvi Pareshbhai", id: 3 },
+          { text: "Bhalodiya Milan .", id: 4 },
+          { text: "Chavda Drashti Chetanbhai", id: 5 },
         ],
       },
     },
     chartData: {
       chartType: "line",
-      options: ["Option X", "Option Y", "Option Z"],
-      data: [5, 15, 25],
+      options: [
+        "Adhiya Mansee Bhupatrai",
+        "Akbari Krupali Jayantibhai",
+        "Ashara Janvi Pareshbhai",
+        "Bhalodiya Milan .",
+        "Chavda Drashti Chetanbhai",
+      ],
+      data: [21, 23, 21, 26, 26],
     },
   },
   {
     id: 3,
     content: {
-      title: "Pie Chart Example",
+      title: "Book Observation and Record Analysis",
       options: {
         data: [
           { text: "Category A", id: 1 },
@@ -441,18 +457,17 @@ export const slides = [
     },
     chartData: {
       chartType: "pie",
-      options: ["Category A", "Category B", "Category C"],
+      options: ["Book Observation", "Book Record"],
       data: [
-        { value: 40, name: "Category A" },
-        { value: 30, name: "Category B" },
-        { value: 30, name: "Category C" },
+        { value: 590, name: "Book Observation" },
+        { value: 590, name: "Book Record" },
       ],
     },
   },
   {
     id: 4,
     content: {
-      title: "Scatter Chart Example",
+      title: "Class Activity vs Practical Skill Relationship",
       options: {
         data: [
           { text: "Point 1", id: 1 },
@@ -463,11 +478,19 @@ export const slides = [
     },
     chartData: {
       chartType: "scatter",
-      options: ["X1", "X2", "X3"],
+      options: [
+        "Adhiya Mansee Bhupatrai",
+        "Akbari Krupali Jayantibhai",
+        "Ashara Janvi Pareshbhai",
+        "Bhalodiya Milan .",
+        "Chavda Drashti Chetanbhai",
+      ],
       data: [
-        [10, 20], // X=10, Y=20
-        [15, 25], // X=15, Y=25
-        [20, 30], // X=20, Y=30
+        [20, 30],
+        [20, 20],
+        [20, 28],
+        [20, 23],
+        [8, 20],
       ],
     },
   },
